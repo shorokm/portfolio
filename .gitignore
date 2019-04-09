@@ -1,0 +1,58 @@
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.idea
+thumbs.db
+
+# Build Systems #
+######################
+node_modules/
+bower_components/
+.sass-cache
+*.css.map
+build/
+dist/
+maps/
+/wp-trackback.php
+/wp-mail.php
+/license.txt
+/wp-cron.php
+/wp-login.php
+/wp-admin/
+/wp-links-opml.php
+/index.php
+/wp-config-sample.php
+/wp-settings.php
+/wp-activate.php
+/wp-signup.php
+/wp-load.php
+/readme.html
+/wp-blog-header.php
+/wp-comments-post.php
+/xmlrpc.php
+/wp-includes/
+/.htaccess
+_v1/

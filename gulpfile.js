@@ -74,7 +74,7 @@ gulp.task('default', ['fileinclude', 'server', 'sass', 'js', 'imagemin', 'webfon
   gulp.watch('./src/scss/**/*', ['sass']);
   gulp.watch('./src/js/**/*', ['js']);
   gulp.watch('./src/html/**/*.html', ['fileinclude']);
-  gulp.watch('./src/media/*', ['imagemin']);
+  // gulp.watch('./src/media/*', ['imagemin']);
   gulp.watch('./src/webfonts/*', ['webfonts']);
   gulp.watch('./dist/*').on('change', browserSync.reload);
 });
