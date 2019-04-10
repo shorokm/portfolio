@@ -2,8 +2,9 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 15px;
   font-size: 1.05rem;
+  position: absolute;
+  width: 100%;
   div {
     ul {
       display: flex;
@@ -12,10 +13,10 @@ nav {
   }
   .logo {
     padding-right: 40px;
-    // display: absolute;
-    // z-index: 6;
+    padding: 15px;
   }
   .menu-options {
+    padding: 15px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -29,22 +30,23 @@ nav {
   .icon {
     .fa-bars{
       color: black;
-      font-size: 1.15rem;
+      font-size: 1.4rem;
       margin-left: 15px;
+      margin-right: 15px;
       &.openclass{
         color: white;
         position: absolute;
         z-index: 6;
-        right: 20px;
-        font-size: 1.5rem;
+        right: 5px;
+        font-size: 1.9rem;
         top: 17px;
         animation: closeIcon 2.5s;
       }
     }
   }
   .language {
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: flex-end;
   }
   // language switcher 
@@ -62,14 +64,14 @@ nav {
         display: inline-block;
         min-width: 40px;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         &:hover {
           text-decoration: none;
         }
         &.is-active {
           color: grey;
           cursor: default;
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
       }
     }
@@ -80,7 +82,7 @@ nav {
       position: fixed;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.9);
+      background: rgba(0,0,0,0.95);
       top: 0;
       left: 0;
       animation: menuSlide 0.7s;
@@ -91,10 +93,10 @@ nav {
       .options {
         display: block;
         text-align: center;
-        line-height: 70px;
+        line-height: 110px;
         li {
           color: white;
-          font-size: 2.2rem;
+          font-size: 3rem;
           .fas {
             display: none;
           }
