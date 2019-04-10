@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500,700,900');
 nav {
-  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,7 +17,6 @@ nav {
   }
   .menu-options {
     width: 100%;
-    justify-content: flex-start;
     display: flex;
     align-items: center;
     display: none;
@@ -86,17 +83,17 @@ nav {
       background: rgba(0,0,0,0.9);
       top: 0;
       left: 0;
-      animation: menuSlide 1.8s;
+      animation: menuSlide 0.7s;
       margin: 0;
       z-index: 5;
-      display: block;
+      display: flex;
+      justify-content: center;
       .options {
         display: block;
-        margin-top: 30%;
+        text-align: center;
         line-height: 70px;
         li {
           color: white;
-          text-align: center;
           font-size: 2.2rem;
           .fas {
             display: none;
