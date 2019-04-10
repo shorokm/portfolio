@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500,700,900');
+nav {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  font-size: 1.05rem;
+  div {
+    ul {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .logo {
+    padding-right: 40px;
+    // display: absolute;
+    // z-index: 6;
+  }
+  .menu-options {
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    display: none;
+    ul {
+      li{
+        padding-right: 25px;
+      }
+    }
+  }
+  .icon {
+    .fa-bars{
+      color: black;
+      font-size: 1.15rem;
+      margin-left: 15px;
+      &.openclass{
+        color: white;
+        position: absolute;
+        z-index: 6;
+        right: 20px;
+        font-size: 1.5rem;
+        top: 17px;
+        animation: closeIcon 2.5s;
+      }
+    }
+  }
+  .language {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  // language switcher 
+  .lang-switcher {
+    align-items: center;
+    li {
+      border-right: 1px solid grey;
+      &:last-child {
+        border-right: none;
+      }
+      a {
+        color: black;
+        transition: all 0.5s ease;
+        text-decoration: none;
+        display: inline-block;
+        min-width: 40px;
+        text-align: center;
+        font-size: 0.9rem;
+        &:hover {
+          text-decoration: none;
+        }
+        &.is-active {
+          color: grey;
+          cursor: default;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  // End of language switcher
+  @media screen and (max-width: 650px) {
+    .mobile-overlay-show {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      top: 0;
+      left: 0;
+      animation: menuSlide 1.8s;
+      margin: 0;
+      z-index: 5;
+      display: block;
+      .options {
+        display: block;
+        margin-top: 50%;
+        line-height: 70px;
+        li {
+          color: white;
+          text-align: center;
+          font-size: 2.2rem;
+          .fas {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 650px) {
+    .menu-options{
+      display: block;
+    }
+    .icon {
+      .fa {
+        display: none;
+      }
+    }
+    .lang-switcher {
+      li {
+        a {
+          padding: 0px 3px;
+          font-size: 1rem;
+          &.is-active {
+            font-size: 1.05rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes menuSlide { //animation menu
+  from {
+    left: 100vh;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes closeIcon { //animation close icon
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
