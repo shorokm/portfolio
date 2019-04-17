@@ -1,0 +1,87 @@
+.contact-section {
+  background-color: rgb(226, 226, 226);
+  margin-top: 30px;
+  padding: 120px 60px;
+  overflow: hidden;
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .contact-text {
+      display: flex;
+      justify-content: center;
+      p {
+        font-size: 1.3rem;
+        line-height: 30px;
+        width: 60%;
+        a {
+          color: black;
+        }
+      }
+    }
+    .contact-icons{
+      padding-top: 60px;
+      display: flex;
+      justify-content: center;
+      .linkedin{
+        margin-right: 30px;
+      }
+      span {
+        background-color: grey;
+        padding: 30px 32px;
+        border-radius: 99px;
+        i {
+          color: white;
+          font-size: 2.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+    background-color: rgb(226, 226, 226);
+    margin-top: 30px;
+    padding: 80px 20px;
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .contact-text {
+        display: flex;
+        justify-content: center;
+        p {
+          font-size: 1.3rem;
+          line-height: 30px;
+          width: 100%;
+          a {
+            color: black;
+          }
+        }
+      }
+      .contact-icons {
+        .linkedin {
+          animation: none;
+        }
+        .email {
+          animation: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  .contact-section{
+    .contact-content{
+      .contact-text {
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+}

@@ -1,13 +1,11 @@
 .project-section{
   width: 100%;
-  height: 100vh;
-  .project, .project2 {
+  height: 100%;
+  .project {
     display: flex;
-    border: 1px solid rgb(243, 243, 243);
     .project-content {
       width: 40%;
       background-color: rgb(240, 240, 240);
-      height: 100vh;
       .text {
         height: 100%;
         position: relative;
@@ -27,12 +25,12 @@
           border: none;
           border-radius: 99px;
           background-color: grey;
-          color: white;
           outline: none;
           padding: 30px 33px;
-          z-index: 6;
+          z-index: 4;
           .fas {
             font-size: 1.7rem;
+            color: white;
           }
         }
         button:hover {
@@ -42,28 +40,29 @@
     }
     .project-image{
       width: 60%;
-      height: 100vh;
       .image {
         img {
           width: 100%;
-          height: 100vh;
           object-fit: cover;
         }
       }
     }
   }
-  .project2 {
-    flex-direction: row-reverse;
-  }
   @media screen and (max-width: 768px) {
-    .project, .project2 {
+    .project {
       position: relative;
       flex-direction: column;
       .project-content {
+        height: 100%;
+        animation: none;
         width: 100%;
         .text {
+          position: static;
           h2 {
-            padding: 70px 0px 20px 60px;
+            padding: 90px 0px 20px 40px;
+          }
+          p{
+            padding: 0px 70px 150px 40px;
           }
           button {
             position: absolute;
@@ -73,46 +72,57 @@
         }
       }
       .project-image{
-        position: absolute;
+        animation: none;
         width: 100%;
-        height: 60vh;
-        bottom: 0;
         .image {
-          img {
-            height: 60vh;
+          img{
+            bottom: 0;
+            height: 480px;
           }
         }
       }
     }
   }
   @media screen and (max-width: 576px) {
-    .project, .project2 {
+    .project {
       .project-content{
         .text {
+          h2 {
+            padding: 50px 0px 20px 30px;
+          }
           p {
             font-size: 1.3rem;
             line-height: 30px;
-            padding: 0px 50px 10px 60px;
+            padding: 0px 30px 50px 30px;
           }
           button {
             position: absolute;
-            right: 40px;
+            right: 20px;
             bottom: 50px;
           }
         }
       }
       .project {
         .project-image{
-          height: 50vh;
           bottom: 0;
-          .image {
-            img {
-              height: 50vh;
-            }
-          }
         }
       }
     }
   }
 }
 
+@media screen and (min-width: 769px) {
+  .project:nth-child(even) {
+    flex-direction: row-reverse;
+  }  
+  .project-content {
+    height: 100vh;
+  }
+  .project-image{
+    .image {
+      img {
+        height: 100vh;
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 nav {
   display: flex;
   flex-direction: row;
-  align-items: center;
   font-size: 1.05rem;
   position: absolute;
   width: 100%;
@@ -24,6 +23,10 @@ nav {
     ul {
       li{
         padding-right: 25px;
+        a {
+          color: black;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -31,17 +34,20 @@ nav {
     .fa-bars{
       color: black;
       font-size: 1.4rem;
-      margin-left: 15px;
-      margin-right: 15px;
-      &.openclass{
-        color: white;
-        position: absolute;
-        z-index: 6;
-        right: 5px;
-        font-size: 1.9rem;
-        top: 17px;
-        animation: closeIcon 2.5s;
-      }
+      top: 20px;
+      right: 10px;
+      position: absolute;
+    }
+    .fa-times {
+      position: relative;
+      z-index: 6;
+      font-size: 1.9rem;
+      color: white;
+      position: fixed;
+      animation: closeIcon 1.2s;
+      right: 20px;
+      top: 20px;
+      font-weight: normal;
     }
   }
   .language {
@@ -78,6 +84,17 @@ nav {
   }
   // End of language switcher
   @media screen and (max-width: 768px) {
+    .menu-options{
+      padding: 0;
+      ul {
+        li {
+          padding-right: 0px;
+        }
+      }
+    }
+    .language {
+      margin-right: 35px;
+    }
     .mobile-overlay-show {
       position: fixed;
       width: 100%;
@@ -96,9 +113,10 @@ nav {
         line-height: 110px;
         li {
           color: white;
-          font-size: 3rem;
-          .fas {
-            display: none;
+          font-size: 2.9rem;
+          a {
+            color: white;
+            text-decoration: none;
           }
         }
       }
@@ -119,7 +137,7 @@ nav {
           padding: 0px 3px;
           font-size: 1rem;
           &.is-active {
-            font-size: 1.05rem;
+            font-size: 1.2rem;
           }
         }
       }
